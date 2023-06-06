@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:05:52 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/05 18:49:23 by diosanto         ###   ########.fr       */
+/*   Updated: 2023/06/06 11:34:51 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ char			*get_next_line(int fd);
 
 //so_long functions
 void			game_init(t_game *game);
-static void		image_init(t_game *game);
+void		image_init(t_game *game);
 
 #endif

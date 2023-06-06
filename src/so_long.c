@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:10:20 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/05 18:49:21 by diosanto         ###   ########.fr       */
+/*   Updated: 2023/06/06 11:34:27 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ int	map_draw(t_game *game)
 		img_draw(game, game->img_backg, x, y);
 	if (x == 0 && y == 0)
 		return (0);
+	return (0);
 }
 
-static void	image_init(t_game *game)
+void	image_init(t_game *game)
 {
 	game->img_backg = mlx_xpm_file_to_image(game->mlx, "../img/600x300.xpm",
 			&game->img_w, &game->img_h);

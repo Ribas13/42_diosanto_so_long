@@ -6,11 +6,12 @@ LIBFTDIR	= inc/libft
 LIBFT   	= $(LIBFTDIR)/libft.a# path to libft library
 LIBMLXDIR 	= inc/minilibx-linux
 LIBMLX  	= $(LIBMLXDIR)/libmlx_Linux.a# could be /usr/lib, depends on where you decided to put your mlx library
+LFLAGS		= -L /bin/valgrind
 
-#CFLAGS  = -Wall -Werror -Wextra -O3 -g -fsanitize=address
+CFLAGS  = -Wall -Werror -Wextra -O3 -g -fsanitize=address
 UNAME   := $(shell uname)# get the OS name, this will help define behaviors for certain OS's
 
-LFLAGS  	= -L$(LIBMLXDIR) -lmlx -L${LIBFTDIR} -lft -fsanitize=address# if you decided to install libmlx.a locally you don't need "-L$(LIBMLX) -lmlx" the school also has it locally as well...
+LFLAGS  	= -L$(LIBMLXDIR) -lmlx -L${LIBFTDIR} -lft $(LDFLAGS) -fsanitize=address# if you decided to install libmlx.a locally you don't need "-L$(LIBMLX) -lmlx" the school also has it locally as well...
 
 SRC     = 	src/so_long.c				\
 			src/get_next_line.c			\
