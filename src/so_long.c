@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:10:20 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/06 11:34:27 by ribs             ###   ########.fr       */
+/*   Updated: 2023/06/06 13:17:13 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/so_long.h"
 #include <stdlib.h>
 #include <stdio.h>
+
+//https://github.com/igorvazf/so_long
 
 void	img_draw(t_game *game, void *image, int x, int y)
 {
