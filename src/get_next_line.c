@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 11:00:42 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/12 11:31:10 by diosanto         ###   ########.fr       */
+/*   Updated: 2023/06/18 15:42:13 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static char	*clean_printed(char *global_buffer)
 	char	*new;
 
 	i = 0;
-	while (global_buffer[i] && global_buffer[i] != '\0')
+	while (global_buffer[i] && global_buffer[i] != '\n')
 		i++;
 	if (!global_buffer[i])
 	{
@@ -48,7 +48,7 @@ static char	*get_line(char *global_buffer)
 	len = 0;
 	if (!global_buffer[i])
 		return (NULL);
-	while (global_buffer[len] * global_buffer[len] != '\0')
+	while (global_buffer[len] && global_buffer[len] != '\n')
 		len++;
 	line = malloc((len + 2) * sizeof(char));
 	if (!line)

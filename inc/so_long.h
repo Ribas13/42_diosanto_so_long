@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:05:52 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/13 18:04:39 by diosanto         ###   ########.fr       */
+/*   Updated: 2023/06/18 18:40:27 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 # include <limits.h>
 # include "libft/libft.h"
 # include "error_messages.h"
+# include "tiles.h"
+# include "keys.h"
 
 //Constants
 
@@ -100,14 +102,22 @@ static inline	t_game	init_game(void)
 bool		is_onstr(const char *str, int ch);
 char		*get_next_line(int fd);
 
-//so_long functions
-
 
 //Map Functions
 void		get_map(char *map_file, t_game *game);
 void		map_check(t_game *game);
 void		check_path(t_game *game);
 char		*trim_free(char *s1, char const *set);
+void		render_map(t_game *game);
+void		render_tiles(t_game *game);
+
+//MAP render
+void		render_map(t_game *game);
+void		render_tiles(t_game *game);
+
+//Player functions
+void		put_player_tile(t_game *game);
+void		update_player_pos(t_game *game, bool horizontal, int length);
 
 //Error handling
 void		errors(t_game *game, char *error_msg);
@@ -117,4 +127,14 @@ void		free_matrix(char **matrix);
 void		destroy_tiles(t_game *game);
 void		destroy(t_game *game);
 
+//HOOK_N_RUN functions
+void		hook_n_run(t_game *game);
+int			on_press(int key, t_game *game);
+
+
+//MLX
+void		init_mlx(t_game *game);
+
+//QUIT
+int			quit_game(t_game *game);
 #endif

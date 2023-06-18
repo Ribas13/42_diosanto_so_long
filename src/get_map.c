@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_map.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 16:40:05 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/13 18:04:37 by diosanto         ###   ########.fr       */
+/*   Updated: 2023/06/18 15:45:24 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,6 @@ static void	get_lines(char *map_file, t_game *game)
 		i += 1;
 	}
 	game->map.columns = ft_strlen(game->map.map[0]);
-	/* i = 0;
-	while (i < game->map.rows)
-	{
-		printf("%s", game->map.map[i]);
-		i++;
-	} */
 }
 
 void	get_map(char *map_file, t_game *game)

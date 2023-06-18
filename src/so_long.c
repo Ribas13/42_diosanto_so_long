@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:10:20 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/12 14:26:35 by diosanto         ###   ########.fr       */
+/*   Updated: 2023/06/18 18:54:15 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int	main(int ac, char **av)
 	game = init_game();
 	get_map(av[1], &game);
 	map_check(&game);
-	/* init_mlx(&game);
+	init_mlx(&game);
 	render_map(&game);
-	hook_n_run(&game); */
+	hook_n_run(&game);
 	return (EXIT_SUCCESS);
 }

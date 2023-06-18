@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_checker.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 11:34:07 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/13 18:04:38 by diosanto         ###   ########.fr       */
+/*   Updated: 2023/06/18 16:10:45 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ static void	check_elements(t_game *game)
 				game->map.player_pos = (t_point){j, i};
 			}
 		}
-		throw_error_if(game);
 	}
+	throw_error_if(game);
 }
 
 static bool	is_closed(t_map *map)
@@ -75,7 +75,6 @@ static bool	valid_form(t_game *game)
 	i = 0;
 	while (game->map.map[i] != NULL)
 	{
-		printf("\nRow %li length: %li\n", i, ft_strlen(game->map.map[i]));
 		if (len != ft_strlen(game->map.map[i]))
 			return (false);
 		i += 1;

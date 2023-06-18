@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tiles.h                                            :+:      :+:    :+:   */
+/*   init_mlx.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/11 16:45:54 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/18 18:56:18 by ribs             ###   ########.fr       */
+/*   Created: 2023/06/18 16:12:41 by ribs              #+#    #+#             */
+/*   Updated: 2023/06/18 18:44:55 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef IMAGES_H
-# define IMAGES_H
+#include "../inc/so_long.h"
 
-# define WALL_TILE "./assets/wall.xpm"
-# define FLOOR_TILE "./assets/floor.xpm"
-# define PLAYER_TILE "./assets/player.xpm"
-# define ENEMY_TILE "./assets/ghost.xpm"
-# define COLLECTIBLE_TILE "./assets/coin.xpm"
-# define EXIT_TILE "./assets/exit.xpm"
-
-# define TILE_SIZE 128
-
-#endif
+void	init_mlx(t_game *game)
+{
+	game->mlx_ptr = mlx_init();
+	if (!game->mlx_ptr)
+		errors(game, MLX_INIT_ERR);
+	game->win_ptr = mlx_new_window(game->mlx_ptr,
+			game->map.columns * TILE_SIZE, game->map.rows * TILE_SIZE,
+			"so_long");
+	if (!game->win_ptr)
+		errors(game, MLX_NEW_WINDOW_ERR);
+}

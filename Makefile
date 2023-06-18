@@ -13,14 +13,18 @@ UNAME   := $(shell uname)# get the OS name, this will help define behaviors for 
 
 LFLAGS  	= -L$(LIBMLXDIR) -lmlx -L${LIBFTDIR} -lft $(LDFLAGS) -fsanitize=address# if you decided to install libmlx.a locally you don't need "-L$(LIBMLX) -lmlx" the school also has it locally as well...
 
-SRC     = 	src/so_long.c					\
+SRC     = 	src/destroy.c					\
 			src/errors.c					\
-			src/destroy.c					\
 			src/get_map.c					\
-			src/path_checker.c				\
-			src/map_checker.c				\
 			src/get_next_line.c				\
+			src/map_checker.c				\
+			src/path_checker.c				\
+			src/so_long.c					\
 			src/trim_free.c					\
+			src/hook_n_run.c				\
+			src/init_mlx.c					\
+			src/player.c					\
+			src/render_map.c
 
 OBJ     = $(SRC:%.c=%.o)# convert source files to binary list
 
