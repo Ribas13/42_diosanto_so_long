@@ -6,7 +6,7 @@
 /*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 18:02:21 by ribs              #+#    #+#             */
-/*   Updated: 2023/06/18 18:15:45 by ribs             ###   ########.fr       */
+/*   Updated: 2023/06/20 15:08:56 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int	on_press(int key, t_game *game)
 void	hook_n_run(t_game *game)
 {
 	mlx_hook(game->win_ptr, KEYPRESS_EVENT, (1L << 0), on_press, game);
-	mlx_hook(game->win_ptr, KEYPRESS_EVENT, (1L << 17), quit_game, game);
+	mlx_hook(game->win_ptr, DESTROY_NOTIFY_EVENT, (1L << 17), quit_game, game);
 	mlx_loop(game->mlx_ptr);
 }

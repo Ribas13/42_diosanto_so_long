@@ -6,7 +6,7 @@
 /*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 11:41:42 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/18 16:03:05 by ribs             ###   ########.fr       */
+/*   Updated: 2023/06/20 15:16:20 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,27 +33,6 @@ static char	**blank_grid(t_game *game)
 	}
 	return (grid);
 }
-
-/* static bool	flood_fill(t_map *map, t_point curr, char **sol_grid)
-{
-	static int	coins;
-	static bool	found_exit;
-
-	coins = 0;
-	found_exit = false;
-	if (sol_grid[curr.y][curr.x] == WALL)
-		return (false);
-	else if (sol_grid[curr.y][curr.x] == COLLECTIBLE)
-		coins += 1;
-	else if (sol_grid[curr.y][curr.x] == EXIT)
-		found_exit = true;
-	sol_grid[curr.y][curr.x] = WALL;
-	flood_fill(map, (t_point){curr.x + 1, curr.y}, sol_grid);
-	flood_fill(map, (t_point){curr.x - 1, curr.y}, sol_grid);
-	flood_fill(map, (t_point){curr.x, curr.y + 1}, sol_grid);
-	flood_fill(map, (t_point){curr.x, curr.y - 1}, sol_grid);
-	return (coins == map->collectibles && found_exit);
-} */
 
 static bool	flood_fill(t_map *map, t_point curr, char **sol_grid)
 {
