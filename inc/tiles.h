@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tiles.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 16:45:54 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/20 14:14:04 by ribs             ###   ########.fr       */
+/*   Updated: 2023/06/21 11:20:23 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # define ENEMY_TILE "./assets/ghost.xpm"
 # define COLLECTIBLE_TILE "./assets/coin.xpm"
 # define EXIT_TILE "./assets/exit.xpm"
-
 # define TILE_SIZE 128
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:05:52 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/18 18:40:27 by ribs             ###   ########.fr       */
+/*   Updated: 2023/06/21 11:19:39 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,6 @@ static inline	t_game	init_game(void)
 bool		is_onstr(const char *str, int ch);
 char		*get_next_line(int fd);
 
-
 //Map Functions
 void		get_map(char *map_file, t_game *game);
 void		map_check(t_game *game);
@@ -130,7 +129,6 @@ void		destroy(t_game *game);
 //HOOK_N_RUN functions
 void		hook_n_run(t_game *game);
 int			on_press(int key, t_game *game);
-
 
 //MLX
 void		init_mlx(t_game *game);
