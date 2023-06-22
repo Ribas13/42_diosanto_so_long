@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 11:10:20 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/20 14:52:22 by ribs             ###   ########.fr       */
+/*   Updated: 2023/06/22 15:51:38 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/so_long.h"
 #include <stdlib.h>
 #include <stdio.h>
-
-//https://github.com/Kuninoto/42_so_long/tree/master/lvl_2_so_long
 
 static void	av_checker(int ac, char **av)
 {
