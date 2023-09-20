@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_checker.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ribs <ribs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 11:34:07 by diosanto          #+#    #+#             */
-/*   Updated: 2023/06/22 15:44:09 by diosanto         ###   ########.fr       */
+/*   Updated: 2023/06/18 16:10:45 by ribs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ static bool	valid_form(t_game *game)
 	i = 0;
 	while (game->map.map[i] != NULL)
 	{
-		// printf("Number of rows: %zu\n", ft_strlen(game->map.map[i]));
 		if (len != ft_strlen(game->map.map[i]))
 			return (false);
 		i += 1;
