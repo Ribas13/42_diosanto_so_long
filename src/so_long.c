@@ -14,8 +14,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-//https://github.com/Kuninoto/42_so_long/tree/master/lvl_2_so_long
-
 static void	av_checker(int ac, char **av)
 {
 	if (ac != 2)
